@@ -78,7 +78,7 @@ contract StandardToken is Token {
    
 }
 
-contract WolverineCoin is StandardToken { // CHANGE THIS. Update the contract name.
+contract GovernMintCoin is StandardToken { // CHANGE THIS. Update the contract name.
 
     /* Public variables of the token */
 
@@ -98,13 +98,13 @@ contract WolverineCoin is StandardToken { // CHANGE THIS. Update the contract na
 
     // This is a constructor function 
     // which means the following function name has to match the contract name declared above
-    function WolverineCoin() {
-        balances[msg.sender] = 1000000000000000000000;               // Give the creator all initial tokens. This is set to 1000 for example.
-        totalSupply = 1000000000000000000000;                        // Update total supply (1000 for example) (CHANGE THIS)
-        name = "WolverineCoin";                                   // Set the name for display purposes (CHANGE THIS)
+    function GovernMintCoin() {
+        balances[msg.sender] = 10000000000;                          // Give the creator all initial tokens. This is set to 1000 for example.
+        totalSupply = 10000000000;                                   // Update total supply (1000 for example) (CHANGE THIS)
+        name = "GovernMintCoin";                                     // Set the name for display purposes (CHANGE THIS)
         decimals = 18;                                               // Amount of decimals for display purposes (CHANGE THIS)
-        symbol = "MWC";                                             // Set the symbol for display purposes (CHANGE THIS)
-        unitsOneEthCanBuy = 2;                                      // Set the price of your token for the ICO (CHANGE THIS)
+        symbol = "GMC";                                              // Set the symbol for display purposes (CHANGE THIS)
+        unitsOneEthCanBuy = 2;                                       // Set the price of your token for the ICO (CHANGE THIS)
         fundsWallet = msg.sender;                                    // The owner of the contract gets ETH
     }
 
