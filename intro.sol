@@ -88,20 +88,20 @@ contract GovernMintCoin is StandardToken { // CHANGE THIS. Update the contract n
     They allow one to customise the token contract & in no way influences the core functionality.
     Some wallets/interfaces might not even bother to look at this information.
     */
-    string public name;                   // Token Name
+    string public name;                   // Token Name 
     uint8 public decimals;                // How many decimals to show. To be standard complicant keep it 18
     string public symbol;                 // An identifier: eg SBX, XPR etc..
     string public version = 'H1.0'; 
-    uint256 public unitsOneEthCanBuy;     // How many units of your coin can be bought by 1 ETH?
+    uint256 public unitsOneEthCanBuy;     // How many units of your coin can be bought by 1 ETH? fraction
     uint256 public totalEthInWei;         // WEI is the smallest unit of ETH (the equivalent of cent in USD or satoshi in BTC). We'll store the total ETH raised via our ICO here.  
     address public fundsWallet;           // Collect all the ether we receive
 
     // This is a constructor function 
     // which means the following function name has to match the contract name declared above
     function GovernMintCoin() {
-        balances[msg.sender] = 10000000000;                          // Give the creator all initial tokens. This is set to 1000 for example.
-        totalSupply = 10000000000;                                   // Update total supply (1000 for example) (CHANGE THIS)
-        name = "GovernMintCoin";                                     // Set the name for display purposes (CHANGE THIS)
+        balances[msg.sender] = 1000000;                              // Give the creator all initial tokens. This is set to 1000 for example.
+        totalSupply = 1000000;                                       // Update total supply (1000 for example) (CHANGE THIS)
+        name = "ElkCoin";                                            // Set the name for display purposes (CHANGE THIS)
         decimals = 18;                                               // Amount of decimals for display purposes (CHANGE THIS)
         symbol = "GMC";                                              // Set the symbol for display purposes (CHANGE THIS)
         unitsOneEthCanBuy = 2;                                       // Set the price of your token for the ICO (CHANGE THIS)
